@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UEFA Euro 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #143CDA;
+            color: white;
+            flex-direction: column;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 40px; 
+            background-color: #143CDA;
+            padding: 40px;
+        }
+        .group {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .group:hover {
+            transform: scale(1.05);
+        }
+        .logo {
+            padding-top: 150px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="./img/group_title.jpeg" alt="UEFA Euro 2024 Logo">
+    <div class="container">
+        <img class="group" src="./img/AGroup.jpeg" alt="Group A" onclick="navigateTo('groupA.html')">
+        <img class="group" src="./img/BGroup.jpeg" alt="Group B" onclick="navigateTo('groupB.html')">
+        <img class="group" src="./img/CGroup.jpeg" alt="Group C" onclick="navigateTo('groupC.html')">
+        <img class="group" src="./img/DGroup.jpeg" alt="Group D" onclick="navigateTo('groupD.html')">
+        <img class="group" src="./img/EGroup.jpeg" alt="Group E" onclick="navigateTo('groupE.html')">
+        <img class="group" src="./img/FGroup.jpeg" alt="Group F" onclick="navigateTo('groupF.html')">
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
