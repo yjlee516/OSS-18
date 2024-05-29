@@ -1,27 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UEFA Euro 2024</title>
+    <meta charset="utf-8">
+    <title>UEFA EURO 2024</title>
+    <link rel="icon" type="image/png" href="./img/euro-2024-logo-favicon.png">
     <style>
-        body, html {
+        body {
             margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            overflow-x: hidden;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+        .logo {
+            display: grid;
+            place-items: center;
+        }
+        a {
+            display: block;
+            width: 25%;
+            height: auto;
+            text-align: center;
         }
         img {
             display: block;
             width: 100%;
             height: auto;
+            opacity: 0;
+            transform: translateY(100px);
+            animation: riseUp 1.5s forwards;
+        }
+        @keyframes riseUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <a href="group_stage.html">
-        <img src="./img/main_page.jpeg" alt = "main_page"> 
-    </a>
+    <div class="logo">
+        <a href="home.html">
+            <img src="./img/euro-2024-logo-white.png" alt="UEFA EURO 2024">
+        </a>
+    </div>
 </body>
 </html>
