@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euro 2024 Groups</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 150vh;
+        }
+
+        header {
+            background-color: #3a3a3a;
+            color: white;
+            padding: 50px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .logo {
+            width: 200px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .teams {
+            margin: 20px 0;
+        }
+
+        .teams h1 {
+            margin-bottom: 30px;
+        }
+
+        .teams h2 {
+            margin-bottom: 40px;
+        }
+
+        .teams .team-group {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .team img {
+            width: 80px;
+            height: 60px;
+            margin-bottom: 20px;
+        }
+
+        .team p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 992px) {
+            .teams .team-group {
+                grid-template-columns: repeat(4, 1fr); /* 화면이 작아지면 한 줄에 4개의 열 */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .teams .team-group {
+                grid-template-columns: repeat(2, 1fr); /* 화면이 더 작아지면 한 줄에 2개의 열 */
+            }
+
+            nav ul li {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .teams .team-group {
+                grid-template-columns: 1fr; /* 화면이 더 작아지면 한 줄에 1개의 열 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="home.html">
+            <img src="./img/euro-2024-logo.png" alt="UEFA EURO 2024" class="logo">
+        </a>
+        <h1>EURO 2024 GERMANY</h1>
+        <nav>
+            <ul>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="#">Stadium</a></li>
+                <li><a href="#">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="teams">
+            <h1> Teams</h1>
+            <h2>Group stage</h2>
+            <div class="team-group">
+                <div class="team">
+                    <img src="./img/albania.gif" alt="Albania">
+                    <p>Albania</p>
+                </div>
+                <div class="team">
+                    <img src="./img/austria.gif" alt="Austria">
+                    <p>Austria</p>
+                </div>
+                <div class="team">
+                    <img src="./img/belgium.gif" alt="Belgium">
+                    <p>Belgium</p>
+                </div>
+                <div class="team">
+                    <img src="./img/croatia.gif" alt="Croatia">
+                    <p>Croatia</p>
+                </div>
+                <div class="team">
+                    <img src="./img/czechia.gif" alt="Czechia">
+                    <p>Czechia</p>
+                </div>
+                <div class="team">
+                    <img src="./img/denmark.gif" alt="Denmark">
+                    <p>Denmark</p>
+                </div>
+                <div class="team">
+                    <img src="./img/england.gif" alt="England">
+                    <p>England</p>
+                </div>
+                <div class="team">
+                    <img src="./img/france.gif" alt="France">
+                    <p>France</p>
+                </div>
+                <div class="team">
+                    <img src="./img/georgia.gif" alt="Georgia">
+                    <p>Georgia</p>
+                </div>
+                <div class="team">
+                    <img src="./img/germany.gif" alt="Germany">
+                    <p>Germany</p>
+                </div>
+                <div class="team">
+                    <img src="./img/hungary.gif" alt="Hungary">
+                    <p>Hungary</p>
+                </div>
+                <div class="team">
+                    <img src="./img/italy.gif" alt="Italy">
+                    <p>Italy</p>
+                </div>
+                <div class="team">
+                    <img src="./img/netherlands.gif" alt="Netherlands">
+                    <p>Netherlands</p>
+                </div>
+                <div class="team">
+                    <img src="./img/poland.gif" alt="Poland">
+                    <p>Poland</p>
+                </div>
+                <div class="team">
+                    <img src="./img/portugal.gif" alt="Portugal">
+                    <p>Portugal</p>
+                </div>
+                <div class="team">
+                    <img src="./img/romania.gif" alt="Romania">
+                    <p>Romania</p>
+                </div>
+                <div class="team">
+                    <img src="./img/scotland.gif" alt="Scotland">
+                    <p>Scotland</p>
+                </div>
+                <div class="team">
+                    <img src="./img/serbia.gif" alt="Serbia">
+                    <p>Serbia</p>
+                </div>
+                <div class="team">
+                    <img src="./img/slovakia.gif" alt="Slovakia">
+                    <p>Slovakia</p>
+                </div>
+                <div class="team">
+                    <img src="./img/slovenia.gif" alt="Slovenia">
+                    <p>Slovenia</p>
+                </div>
+                <div class="team">
+                    <img src="./img/spain.gif" alt="Spain">
+                    <p>Spain</p>
+                </div>
+                <div class="team">
+                    <img src="./img/switzerland.gif" alt="Switzerland">
+                    <p>Switzerland</p>
+                </div>
+                <div class="team">
+                    <img src="./img/turkiye.gif" alt="Turkiye">
+                    <p>Turkiye</p>
+                </div>
+                <div class="team">
+                    <img src="./img/ukraine.gif" alt="Ukraine">
+                    <p>Ukraine</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
