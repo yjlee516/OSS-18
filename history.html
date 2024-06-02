@@ -1,34 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>역사적인 축구 경기</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UEFA EURO 2024 Group A</title>
+    <link rel="icon" type="image/png" href="./img/euro-2024-logo-favicon.png">
+    <link rel="stylesheet" href="navigation.css">
     <style>
         body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            height: 150vh;
         }
-        .title {
-    position: absolute;
-    top: 10px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff; /* 진한 흰색으로 변경 */
-    z-index: 10;
-}
+        main {
+            padding: 20px;
+        }
+        .history-section {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
         .main-image-container {
             position: relative;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             border: 5px solid #ccc;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -103,81 +99,95 @@
     </style>
 </head>
 <body>
-    <div class="title">History of Euro</div>
-    <div class="main-image-container">
-        <!-- 이미지 경로를 올바른 경로로 수정하세요 -->
-        <img src="C:\Users\태현\OSS-18\img\역사 트로피 사진.jpg" class="main-image">
-        <!-- 영역 구분 블록 -->
-        <div class="row">
-            <div class="column vertical-line"></div>
-        </div>
-        <div class="row">
-            <div class="column vertical-line"></div>
-            <div class="column vertical-line"></div>
-        </div>
-        <div class="row">
-            <div class="column horizontal-line"></div>
-        </div>
-        <div class="row">
-            <div class="column horizontal-line"></div>
-            <div class="column horizontal-line"></div>
-        </div>
-        <!-- 링크 영역 -->
-        <div class="link-block" style="top: 0; left: 0;">
-            <div class="link-area"><a href="https://example.com/person1"></a></div>
-            <div class="text-area">
-                <p>
-                    초기 역사와 시작<br>
-                    창설과 첫 대회 (1960)<br>
-                    유로의 기원은 1950년대에 시작됩니다. 유럽 축구 연맹(UEFA)은 1954년에 설립되었고, 1958년에는 유럽 대륙 챔피언십 대회를 만들기로 결정했습니다. 첫 번째 대회는 1960년에 프랑스에서 열렸으며, 당시 "유럽 네이션스컵(European Nations' Cup)"이라는 이름으로 불렸습니다. 이 대회에는 17개 팀이 참가했으며, 소련이 유고슬라비아를 결승에서 2-1로 이기며 초대 챔피언이 되었습니다.
-                </p>
-            </div>
-        </div>
-        <div class="link-block" style="top: 0; left: 50%;">
-            <div class="link-area"><a href="https://example.com/person2"></a></div>
-            <div class="text-area">
-                <p>
-                    대회 발전과 확장<br>
-                    1960년대와 1970년대<br>
-                    초기 대회는 4팀이 참가하는 결승 토너먼트로 구성되었고, 예선 라운드는 홈 앤 어웨이 방식으로 진행되었습니다. 1968년에는 이탈리아가 유럽 챔피언이 되었고, 1972년에는 서독이, 1976년에는 체코슬로바키아가 각각 우승을 차지했습니다. 1976년 대회에서는 결승전이 처음으로 승부차기에서 결정되었는데, 체코슬로바키아의 안토닌 파넨카가 독특한 페널티킥을 성공시키며 유명해졌습니다.
-                    <br><br>
-                    1980년대와 1990년대<br>
-                    1980년 대회부터 참가 팀이 8팀으로 늘어났습니다. 1984년에는 프랑스가 미셸 플라티니의 활약으로 우승을 차지했으며, 1992년에는 덴마크가 예선 탈락 후 유고슬라비아의 내전으로 인해 극적으로 본선에 진출하여 우승을 차지하는 드라마틱한 사건이 있었습니다. 1996년부터는 참가 팀이 16팀으로 확대되었습니다.
-                </p>
-            </div>
-        </div>
-        <div class="link-block" style="top: 50%; left: 0;">
-            <div class="link-area"><a href="https://example.com/person3"></a></div>
-            <div class="text-area">
-                <p>
-                    현대의 유로 대회<br>
-                    2000년대 이후<br>
-                    2000년에는 벨기에와 네덜란드가 공동 개최하며, 프랑스가 결승전에서 이탈리아를 꺾고 우승을 차지했습니다. 2004년에는 그리스가 큰 이변을 일으키며 우승했고, 2012년 대회는 폴란드와 우크라이나가 공동 개최했습니다. 2016년 대회부터는 참가 팀이 24팀으로 확대되었으며, 포르투갈이 프랑스를 꺾고 우승을 차지했습니다.
-                    <br><br>
-                    2020년대와 현재<br>
-                    유로 2020 대회는 코로나19 팬데믹으로 인해 2021년으로 연기되었으며, 대회는 유럽 전역의 11개 도시에서 개최되었습니다. 이탈리아가 잉글랜드를 승부차기 끝에 꺾고 우승을 차지했습니다.
-                </p>
-            </div>
-        </div>        
-        <div class="link-block" style="top: 50%; left: 50%;">
-            <div class="link-area"><a href="https://example.com/person4"></a></div>
-            <div class="text-area">
-                <p>
-                    주요 우승팀<br>
-                    독일: 3회 우승 (1972, 1980, 1996)<br>
-                    스페인: 3회 우승 (1964, 2008, 2012)<br>
-                    프랑스: 2회 우승 (1984, 2000)<br>
-                    이탈리아: 2회 우승 (1968, 2020)<br>
-                    소련: 1회 우승 (1960)<br>
-                    체코슬로바키아: 1회 우승 (1976)<br>
-                    네덜란드: 1회 우승 (1988)<br>
-                    덴마크: 1회 우승 (1992)<br>
-                    그리스: 1회 우승 (2004)<br>
-                    포르투갈: 1회 우승 (2016)
-                </p>
-            </div>
-        </div>
-        
-    </div>
+    <header>
+        <a href="home.html">
+            <img src="./img/euro-2024-logo.png" alt="UEFA EURO 2024" class="logo">
+        </a>
+        <h1>EURO 2024 GERMANY</h1>
+        <nav>
+            <ul>
+                <li><a href="teams.html">Teams</a></li>
+                <li><a href="stadiums.html">Stadiums</a></li>
+                <li><a href="history.html">History</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>History of Euro</h1>
+        <section class="history-section">
+            <div class="main-image-container">
+                <img src="./img/trophy.jpg" class="main-image">
+                <!-- 영역 구분 블록 -->
+                <div class="row">
+                    <div class="column vertical-line"></div>
+                </div>
+                <div class="row">
+                    <div class="column vertical-line"></div>
+                    <div class="column vertical-line"></div>
+                </div>
+                <div class="row">
+                    <div class="column horizontal-line"></div>
+                </div>
+                <div class="row">
+                    <div class="column horizontal-line"></div>
+                    <div class="column horizontal-line"></div>
+                </div>
+                <!-- 링크 영역 -->
+                <div class="link-block" style="top: 0; left: 0;">
+                    <div class="link-area"><a href="https://example.com/person1"></a></div>
+                    <div class="text-area">
+                        <p>
+                            초기 역사와 시작<br>
+                            창설과 첫 대회 (1960)<br>
+                            유로의 기원은 1950년대에 시작됩니다. 유럽 축구 연맹(UEFA)은 1954년에 설립되었고, 1958년에는 유럽 대륙 챔피언십 대회를 만들기로 결정했습니다. 첫 번째 대회는 1960년에 프랑스에서 열렸으며, 당시 "유럽 네이션스컵(European Nations' Cup)"이라는 이름으로 불렸습니다. 이 대회에는 17개 팀이 참가했으며, 소련이 유고슬라비아를 결승에서 2-1로 이기며 초대 챔피언이 되었습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="link-block" style="top: 0; left: 50%;">
+                    <div class="link-area"><a href="https://example.com/person2"></a></div>
+                    <div class="text-area">
+                        <p>
+                            대회 발전과 확장<br>
+                            1960년대와 1970년대<br>
+                            초기 대회는 4팀이 참가하는 결승 토너먼트로 구성되었고, 예선 라운드는 홈 앤 어웨이 방식으로 진행되었습니다. 1968년에는 이탈리아가 유럽 챔피언이 되었고, 1972년에는 서독이, 1976년에는 체코슬로바키아가 각각 우승을 차지했습니다. 1976년 대회에서는 결승전이 처음으로 승부차기에서 결정되었는데, 체코슬로바키아의 안토닌 파넨카가 독특한 페널티킥을 성공시키며 유명해졌습니다.
+                            <br><br>
+                            1980년대와 1990년대<br>
+                            1980년 대회부터 참가 팀이 8팀으로 늘어났습니다. 1984년에는 프랑스가 미셸 플라티니의 활약으로 우승을 차지했으며, 1992년에는 덴마크가 예선 탈락 후 유고슬라비아의 내전으로 인해 극적으로 본선에 진출하여 우승을 차지하는 드라마틱한 사건이 있었습니다. 1996년부터는 참가 팀이 16팀으로 확대되었습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="link-block" style="top: 50%; left: 0;">
+                    <div class="link-area"><a href="https://example.com/person3"></a></div>
+                    <div class="text-area">
+                        <p>
+                            현대의 유로 대회<br>
+                            2000년대 이후<br>
+                            2000년에는 벨기에와 네덜란드가 공동 개최하며, 프랑스가 결승전에서 이탈리아를 꺾고 우승을 차지했습니다. 2004년에는 그리스가 큰 이변을 일으키며 우승했고, 2012년 대회는 폴란드와 우크라이나가 공동 개최했습니다. 2016년 대회부터는 참가 팀이 24팀으로 확대되었으며, 포르투갈이 프랑스를 꺾고 우승을 차지했습니다.
+                            <br><br>
+                            2020년대와 현재<br>
+                            유로 2020 대회는 코로나19 팬데믹으로 인해 2021년으로 연기되었으며, 대회는 유럽 전역의 11개 도시에서 개최되었습니다. 이탈리아가 잉글랜드를 승부차기 끝에 꺾고 우승을 차지했습니다.
+                        </p>
+                    </div>
+                </div>        
+                <div class="link-block" style="top: 50%; left: 50%;">
+                    <div class="link-area"><a href="https://example.com/person4"></a></div>
+                    <div class="text-area">
+                        <p>
+                            주요 우승팀<br>
+                            독일: 3회 우승 (1972, 1980, 1996)<br>
+                            스페인: 3회 우승 (1964, 2008, 2012)<br>
+                            프랑스: 2회 우승 (1984, 2000)<br>
+                            이탈리아: 2회 우승 (1968, 2020)<br>
+                            소련: 1회 우승 (1960)<br>
+                            체코슬로바키아: 1회 우승 (1976)<br>
+                            네덜란드: 1회 우승 (1988)<br>
+                            덴마크: 1회 우승 (1992)<br>
+                            그리스: 1회 우승 (2004)<br>
+                            포르투갈: 1회 우승 (2016)
+                        </p>
+                    </div>
+                </div>
+        </section>
+    </main>
 </body>
 </html>
