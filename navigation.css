@@ -1,26 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
 header {
     background-color: black;
-    color: white;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
+    font-size: 22px;
+    font-weight: bold;
     text-decoration: none;
+    padding: 15px;
 }
 
 .logo {
+    padding: 0 50px;
     width: 200px;
+}
+
+.active {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+@media (max-width:1000px) {
+    nav {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .logo {
+        order: 0;
+        margin-bottom: 10px; /* Add some space between the logo and the menu */
+    }
+
+    nav ul {
+        order: 1;
+        flex-direction: row; /* Stack menu items vertically */
+        gap: 20px; /* Adjust gap for better spacing */
+        padding: 20px;
+    }
 }

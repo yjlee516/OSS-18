@@ -7,13 +7,6 @@
     <link rel="icon" type="image/png" href="./img/euro-2024-logo-favicon.png">
     <link rel="stylesheet" href="navigation.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 150vh;
-        }
-
         main {
             padding: 20px;
         }
@@ -65,11 +58,6 @@
             .teams .team-group {
                 grid-template-columns: repeat(2, 1fr); /* 화면이 더 작아지면 한 줄에 2개의 열 */
             }
-
-            nav ul li {
-                display: block;
-                text-align: center;
-            }
         }
 
         @media (max-width: 480px) {
@@ -81,15 +69,17 @@
 </head>
 <body>
     <header>
-        <a href="home.html">
-            <img src="./img/euro-2024-logo.png" alt="UEFA EURO 2024" class="logo">
-        </a>
-        <h1>EURO 2024 GERMANY</h1>
         <nav>
             <ul>
-                <li><a href="teams.html">Teams</a></li>
-                <li><a href="stadiums.html">Stadiums</a></li>
-                <li><a href="history.html">History</a></li>
+                <li><a href="teams.html" class="active">TEAMS</a></li>
+                <li><a href="matches.html">MATCHES</a></li>
+            </ul>
+            <a href="home.html">
+                <img src="./img/euro-2024-logo.png" alt="UEFA EURO 2024" class="logo">
+            </a>
+            <ul>
+                <li><a href="stadiums.html">STADIUMS</a></li>
+                <li><a href="history.html">HISTORY</a></li>
             </ul>
         </nav>
     </header>
