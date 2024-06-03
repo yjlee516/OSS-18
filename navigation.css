@@ -46,6 +46,13 @@ nav ul li a {
     width: 220px;
 }
 
+nav ul li a:active {
+    cursor: pointer;
+    background-color: #3a3a3a;
+    border-radius: 30px;
+    padding: 20px;
+}
+
 .active {
     background-color: #2a2a2a;
     border-radius: 30px;
