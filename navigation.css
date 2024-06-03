@@ -36,11 +36,18 @@ nav ul li a {
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
+    padding: 15px;
 }
 
 .logo {
     padding: 0 50px;
     width: 200px;
+}
+
+.active {
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 25px;
 }
 
 @media (max-width:1000px) {
@@ -57,6 +64,6 @@ nav ul li a {
         order: 1;
         flex-direction: row; /* Stack menu items vertically */
         gap: 20px; /* Adjust gap for better spacing */
-        padding: 10px;
+        padding: 20px;
     }
 }
