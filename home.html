@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UEFA EURO 2024 Groups</title>
+    <title>UEFA EURO 2024 HOME</title>
     <link rel="icon" type="image/png" href="./img/euro-2024-logo-favicon.png">
     <link rel="stylesheet" href="navigation.css">
     <style>
@@ -15,24 +15,39 @@
             padding: 20px;
             display: flex;
             justify-content: center;
-            align-items: center;
+            flex-direction: column;
+        }
+
+        h1 {
+            order: 0;
+            color: black;
         }
 
         .groups {
-            display: grid;
-            flex-direction: column;
-            width: 30%;
-            margin: 20px;
+            order: 1;
+            display: flex;
+            overflow-x: hidden;
+            width: 100%;
             gap: 25px;
+            padding: 10px;
+            box-sizing: border-box;
+            cursor: grab;
+        }
+
+        .groups:active {
+            cursor: grabbing;
+            background-color: white;
         }
 
         .group {
+            flex: 0 0 auto;
             background-color: #2a2a2a;
             padding: 20px;
             border-radius: 10px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
         }
 
         .group:hover {
@@ -72,7 +87,6 @@
             color: white;
             text-decoration: none;
         }
-
     </style>
 </head>
 <body>
@@ -92,6 +106,7 @@
         </nav>
     </header>
     <main>
+        <h1>Groups</h1>
         <div class="groups">
             <div class="group" id="group-a" onclick="navigateToGroup('groupA.html')">
                 <h2>Group A</h2>
@@ -153,6 +168,42 @@
         function navigateToGroup(url) {
             window.location.href = url;
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const groupsContainer = document.querySelector('.groups');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            // Mouse down event
+            groupsContainer.addEventListener('mousedown', (e) => {
+                isDown = true;
+                groupsContainer.classList.add('active');
+                startX = e.pageX - groupsContainer.offsetLeft;
+                scrollLeft = groupsContainer.scrollLeft;
+            });
+
+            // Mouse leave event
+            groupsContainer.addEventListener('mouseleave', () => {
+                isDown = false;
+                groupsContainer.classList.remove('active');
+            });
+
+            // Mouse up event
+            groupsContainer.addEventListener('mouseup', () => {
+                isDown = false;
+                groupsContainer.classList.remove('active');
+            });
+
+            // Mouse move event
+            groupsContainer.addEventListener('mousemove', (e) => {
+                if (!isDown) return;
+                e.preventDefault();
+                const x = e.pageX - groupsContainer.offsetLeft;
+                const walk = (x - startX) * 2; // 2 for increased scroll speed
+                groupsContainer.scrollLeft = scrollLeft - walk;
+            });
+        });
     </script>
 </body>
 </html>
