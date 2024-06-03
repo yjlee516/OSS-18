@@ -43,7 +43,7 @@
             flex: 0 0 auto;
             background-color: #2a2a2a;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 20px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -60,27 +60,30 @@
             background-color: #007BFF;
             text-align: center;
             padding: 10px;
-            border-radius: 5px;
-            margin-top: 0;
+            border-radius: 10px;
+            margin: 0;
         }
 
         .group ul {
+            display: grid;
             list-style: none;
             padding: 0;
             text-align: center;
+            gap: 15px;
+            margin: 25px 0 15px;
         }
 
         .group li {
-            display: flex;
+            display: grid;
+            grid-template-columns: 40px 120px;
             align-items: center;
             justify-content: center;
-            margin: 15px 0;
         }
 
         .group li img {
             width: 40px;
             height: 30px;
-            margin-right: 20px;
+            border-radius: 5px;
         }
 
         .group li a {
