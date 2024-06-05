@@ -28,6 +28,14 @@ h1 {
 .team {
     display: flex;
     align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.team:hover {
+    transform: scale(1.05);
+    font-size: 18px;
+    padding: 0 10px;
 }
 
 .team img {
@@ -35,6 +43,7 @@ h1 {
     height: 60px;
     border-radius: 5px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .team a {
@@ -76,8 +85,7 @@ h1 {
 
 .group:hover {
     transform: scale(1.05);
-    background-color: #333;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #3a3a3a;
 }
 
 .group h2 {
