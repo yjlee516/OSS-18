@@ -97,16 +97,14 @@ h1 {
     margin: 25px 0 15px;
 }
 
-.group li a {
+.group ul li {
     display: grid;
     grid-template-columns: 40px 120px;
     align-items: center;
     justify-content: center;
-    color: white;
-    text-decoration: none;
 }
 
-.group li a img {
+.group ul li img {
     width: 40px;
     height: 30px;
     border-radius: 5px;
