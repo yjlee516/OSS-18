@@ -108,7 +108,7 @@
     <main>
         <h1>Groups</h1>
         <div class="groups">
-            <div class="group" id="group-a" onclick="navigateToGroup('groupA.html')">
+            <div class="group" id="group-a" onclick="navigateToGroup('groups.html', this.id)">
                 <h2>Group A</h2>
                 <ul>
                     <li><a href="index.html"><img src="./img/germany.gif" alt="Germany"> Germany</a></li>
@@ -117,7 +117,7 @@
                     <li><a href="index.html"><img src="./img/switzerland.gif" alt="Switzerland"> Switzerland</a></li>
                 </ul>
             </div>
-            <div class="group" id="group-b" onclick="navigateToGroup('groupB.html')">
+            <div class="group" id="group-b" onclick="navigateToGroup('groups.html', this.id)">
                 <h2>Group B</h2>
                 <ul>
                     <li><a href="index.html"><img src="./img/spain.gif" alt="Spain"> Spain</a></li>
@@ -126,7 +126,7 @@
                     <li><a href="index.html"><img src="./img/albania.gif" alt="Albania"> Albania</a></li>
                 </ul>
             </div>
-            <div class="group" id="group-c" onclick="navigateToGroup('groupC.html')">
+            <div class="group" id="group-c" onclick="navigateToGroup('groups.html', this.id)">
                 <h2>Group C</h2>
                 <ul>
                     <li><a href="index.html"><img src="./img/slovenia.gif" alt="Slovenia"> Slovenia</a></li>
@@ -135,7 +135,7 @@
                     <li><a href="index.html"><img src="./img/england.gif" alt="England"> England</a></li>
                 </ul>
             </div>
-            <div class="group" id="group-d" onclick="navigateToGroup('groupD.html')">
+            <div class="group" id="group-d" onclick="navigateToGroup('groups.html', this.id)">
                 <h2>Group D</h2>
                 <ul>
                     <li><a href="index.html"><img src="./img/poland.gif" alt="Poland"> Poland</a></li>
@@ -144,7 +144,7 @@
                     <li><a href="index.html"><img src="./img/france.gif" alt="France"> France</a></li>
                 </ul>
             </div>
-            <div class="group" id="group-e" onclick="navigateToGroup('groupE.html')">
+            <div class="group" id="group-e" onclick="navigateToGroup('groups.html', this.id)">
                 <h2>Group E</h2>
                 <ul>
                     <li><a href="index.html"><img src="./img/belgium.gif" alt="Belgium"> Belgium</a></li>
@@ -153,7 +153,7 @@
                     <li><a href="index.html"><img src="./img/ukraine.gif" alt="Ukraine"> Ukraine</a></li>
                 </ul>
             </div>
-            <div class="group" id="group-f" onclick="navigateToGroup('groupF.html')">
+            <div class="group" id="group-f" onclick="navigateToGroup('groups.html', this.id)">
                 <h2>Group F</h2>
                 <ul>
                     <li><a href="index.html"><img src="./img/turkiye.gif" alt="Turkiye"> Turkiye</a></li>
@@ -165,8 +165,9 @@
         </div>
     </main>
     <script>
-        function navigateToGroup(url) {
-            window.location.href = url;
+        function navigateToGroup(url, id) {
+            // URL에 id 값을 파라미터로 추가하여 페이지 이동
+            window.location.href = `${url}?id=${id}`;
         }
 
         document.addEventListener('DOMContentLoaded', function() {
