@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="navigation.css">
     <style>
         body {
-            color: white;
+            color: black;
         }
 
         main {
@@ -18,76 +18,75 @@
             flex-direction: column;
         }
 
-        h1 {
-            order: 0;
-            color: black;
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
         }
 
-        .groups {
-            order: 1;
-            display: flex;
-            overflow-x: hidden;
-            width: 100%;
-            gap: 25px;
-            padding: 10px;
-            box-sizing: border-box;
-            cursor: grab;
-        }
-
-        .groups:active {
-            cursor: grabbing;
+        /* Style the buttons inside the tab */
+        .tab button {
+            float: left;
+            padding: 0 20px;
             background-color: white;
-        }
-
-        .group {
-            flex: 0 0 auto;
-            background-color: #2a2a2a;
-            padding: 20px;
-            border-radius: 20px;
+            border: none;
+            outline: none;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 250px;
+            transition: 0.3s;
         }
 
-        .group:hover {
-            transform: scale(1.05);
-            background-color: #333;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: whitesmoke;
+            border-radius: 30px;
+        }
+
+        .tablinks.active {
+            background-color: #eee;
+            border-radius: 30px;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+        }
+
+        .group-section {
+            border-radius: 5px;
+            margin: 20px 0;
         }
 
         .group h2 {
-            background-color: #007BFF;
-            text-align: center;
-            padding: 10px;
-            border-radius: 10px;
-            margin: 0;
+            margin-top: 0;
         }
 
-        .group ul {
-            display: grid;
-            list-style: none;
-            padding: 0;
-            text-align: center;
-            gap: 15px;
-            margin: 25px 0 15px;
+        table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        .group li {
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: whitesmoke;
+        }
+
+        table img {
+            width: 40px;
+            height: 30px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        table a {
             display: grid;
             grid-template-columns: 40px 120px;
             align-items: center;
             justify-content: center;
-        }
-
-        .group li img {
-            width: 40px;
-            height: 30px;
-            border-radius: 5px;
-        }
-
-        .group li a {
-            color: white;
+            color: black;
             text-decoration: none;
         }
     </style>
@@ -110,103 +109,592 @@
     </header>
     <main>
         <h1>Groups</h1>
-        <div class="groups">
-            <div class="group" id="group-a" onclick="navigateToGroup('groupA.html')">
-                <h2>Group A</h2>
-                <ul>
-                    <li><img src="./img/germany.gif" alt="Germany"><a href="index.html"> Germany</a></li>
-                    <li><img src="./img/scotland.gif" alt="Scotland"><a href="index.html"> Scotland</a></li>
-                    <li><img src="./img/hungary.gif" alt="Hungary"><a href="index.html"> Hungary</a></li>
-                    <li><img src="./img/switzerland.gif" alt="Switzerland"><a href="index.html"> Switzerland</a></li>
-                </ul>
-            </div>
-            <div class="group" id="group-b" onclick="navigateToGroup('groupB.html')">
-                <h2>Group B</h2>
-                <ul>
-                    <li><img src="./img/spain.gif" alt="Spain"><a href="index.html"> Spain</a></li>
-                    <li><img src="./img/croatia.gif" alt="Croatia"><a href="index.html"> Croatia</a></li>
-                    <li><img src="./img/italy.gif" alt="Italy"><a href="index.html"> Italy</a></li>
-                    <li><img src="./img/albania.gif" alt="Albania"><a href="index.html"> Albania</a></li>
-                </ul>
-            </div>
-            <div class="group" id="group-c" onclick="navigateToGroup('groupC.html')">
-                <h2>Group C</h2>
-                <ul>
-                    <li><img src="./img/slovenia.gif" alt="Slovenia"><a href="index.html"> Slovenia</a></li>
-                    <li><img src="./img/denmark.gif" alt="Denmark"><a href="index.html"> Denmark</a></li>
-                    <li><img src="./img/serbia.gif" alt="Serbia"><a href="index.html"> Serbia</a></li>
-                    <li><img src="./img/england.gif" alt="England"><a href="index.html"> England</a></li>
-                </ul>
-            </div>
-            <div class="group" id="group-d" onclick="navigateToGroup('groupD.html')">
-                <h2>Group D</h2>
-                <ul>
-                    <li><img src="./img/poland.gif" alt="Poland"><a href="index.html"> Poland</a></li>
-                    <li><img src="./img/netherlands.gif" alt="Netherlands"><a href="index.html"> Netherlands</a></li>
-                    <li><img src="./img/austria.gif" alt="Austria"><a href="index.html"> Austria</a></li>
-                    <li><img src="./img/france.gif" alt="France"><a href="index.html"> France</a></li>
-                </ul>
-            </div>
-            <div class="group" id="group-e" onclick="navigateToGroup('groupE.html')">
-                <h2>Group E</h2>
-                <ul>
-                    <li><img src="./img/belgium.gif" alt="Belgium"><a href="index.html"> Belgium</a></li>
-                    <li><img src="./img/slovakia.gif" alt="Slovakia"><a href="index.html"> Slovakia</a></li>
-                    <li><img src="./img/romania.gif" alt="Romania"><a href="index.html"> Romania</a></li>
-                    <li><img src="./img/ukraine.gif" alt="Ukraine"><a href="index.html"> Ukraine</a></li>
-                </ul>
-            </div>
-            <div class="group" id="group-f" onclick="navigateToGroup('groupF.html')">
-                <h2>Group F</h2>
-                <ul>
-                    <li><img src="./img/turkiye.gif" alt="Turkiye"><a href="index.html"> Turkiye</a></li>
-                    <li><img src="./img/georgia.gif" alt="Georgia"><a href="index.html"> Georgia</a></li>
-                    <li><img src="./img/portugal.gif" alt="Portugal"><a href="index.html"> Portugal</a></li>
-                    <li><img src="./img/czechia.gif" alt="Czechia"><a href="index.html"> Czechia</a></li>
-                </ul>
-            </div>
+        <div class="tab">
+            <button class="tablinks" onclick="openGroup(event, 'group-a')"><h2>Group A</h2></button>
+            <button class="tablinks" onclick="openGroup(event, 'group-b')"><h2>Group B</h2></button>
+            <button class="tablinks" onclick="openGroup(event, 'group-c')"><h2>Group C</h2></button>
+            <button class="tablinks" onclick="openGroup(event, 'group-d')"><h2>Group D</h2></button>
+            <button class="tablinks" onclick="openGroup(event, 'group-e')"><h2>Group E</h2></button>
+            <button class="tablinks" onclick="openGroup(event, 'group-f')"><h2>Group F</h2></button>
+        </div>
+
+        <div id="group-a" class="tabcontent">
+            <section class="group-section">
+                <div class="group">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Played</th>
+                                <th>Won</th>
+                                <th>Drawn</th>
+                                <th>Lost</th>
+                                <th>For</th>
+                                <th>Against</th>
+                                <th>Goal difference</th>
+                                <th>Points</th>
+                                <th>Form guide</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/47--germany/" target="_blank">
+                                        <img src="./img/germany.gif" alt="Germany flag"> Germany
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/117--scotland/" target="_blank">
+                                        <img src="./img/scotland.gif" alt="Scotland flag"> Scotland
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/57--hungary/" target="_blank">
+                                        <img src="./img/hungary.gif" alt="Hungary flag"> Hungary
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/128--switzerland/" target="_blank">
+                                        <img src="./img/switzerland.gif" alt="Switzerland flag"> Switzerland
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="group-b" class="tabcontent">
+            <section class="group-section">
+                <div class="group">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Played</th>
+                                <th>Won</th>
+                                <th>Drawn</th>
+                                <th>Lost</th>
+                                <th>For</th>
+                                <th>Against</th>
+                                <th>Goal difference</th>
+                                <th>Points</th>
+                                <th>Form guide</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/122--spain/" target="_blank">
+                                        <img src="./img/spain.gif" alt="Spain flag"> Spain
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/56370--croatia/" target="_blank">
+                                        <img src="./img/croatia.gif" alt="Croatia flag"> Croatia
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/66--italy/" target="_blank">
+                                        <img src="./img/italy.gif" alt="Italy flag"> Italy
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/2--albania/" target="_blank">
+                                        <img src="./img/albania.gif" alt="Albania flag"> Albania
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="group-c" class="tabcontent">
+            <section class="group-section">
+                <div class="group">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Played</th>
+                                <th>Won</th>
+                                <th>Drawn</th>
+                                <th>Lost</th>
+                                <th>For</th>
+                                <th>Against</th>
+                                <th>Goal difference</th>
+                                <th>Points</th>
+                                <th>Form guide</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/57163--slovenia/" target="_blank">
+                                        <img src="./img/slovenia.gif" alt="Slovenia flag"> Slovenia
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/35--denmark/" target="_blank">
+                                        <img src="./img/denmark.gif" alt="Denmark flag"> Denmark
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/147--serbia/" target="_blank">
+                                        <img src="./img/serbia.gif" alt="Serbia flag"> Serbia
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/39--england/" target="_blank">
+                                        <img src="./img/england.gif" alt="England flag"> England
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="group-d" class="tabcontent">
+            <section class="group-section">
+                <div class="group">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Played</th>
+                                <th>Won</th>
+                                <th>Drawn</th>
+                                <th>Lost</th>
+                                <th>For</th>
+                                <th>Against</th>
+                                <th>Goal difference</th>
+                                <th>Points</th>
+                                <th>Form guide</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/109--poland/" target="_blank">
+                                        <img src="./img/poland.gif" alt="Poland flag"> Poland
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/95--netherlands/" target="_blank">
+                                        <img src="./img/netherlands.gif" alt="Netherlands flag"> Netherlands
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/8--austria/" target="_blank">
+                                        <img src="./img/austria.gif" alt="Austria flag"> Austria
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/43--france/" target="_blank">
+                                        <img src="./img/france.gif" alt="France flag"> France
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="group-e" class="tabcontent">
+            <section class="group-section">
+                <div class="group">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Played</th>
+                                <th>Won</th>
+                                <th>Drawn</th>
+                                <th>Lost</th>
+                                <th>For</th>
+                                <th>Against</th>
+                                <th>Goal difference</th>
+                                <th>Points</th>
+                                <th>Form guide</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/13--belgium/" target="_blank">
+                                        <img src="./img/belgium.gif" alt="Belgium flag"> Belgium
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/58836--slovakia/" target="_blank">
+                                        <img src="./img/slovakia.gif" alt="Slovakia flag"> Slovakia
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/113--romania/" target="_blank">
+                                        <img src="./img/romania.gif" alt="Romania flag"> Romania
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/57166--ukraine/" target="_blank">
+                                        <img src="./img/ukraine.gif" alt="Ukraine flag"> Ukraine
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+
+        <div id="group-f" class="tabcontent">
+            <section class="group-section">
+                <div class="group">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Played</th>
+                                <th>Won</th>
+                                <th>Drawn</th>
+                                <th>Lost</th>
+                                <th>For</th>
+                                <th>Against</th>
+                                <th>Goal difference</th>
+                                <th>Points</th>
+                                <th>Form guide</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/135--turkiye/" target="_blank">
+                                        <img src="./img/turkiye.gif" alt="Turkiye flag"> Turkiye
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/57157--georgia/" target="_blank">
+                                        <img src="./img/georgia.gif" alt="Georgia flag"> Georgia
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/110--portugal/" target="_blank">
+                                        <img src="./img/portugal.gif" alt="Portugal flag"> Portugal
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://www.uefa.com/euro2024/teams/58837--czechia/" target="_blank">
+                                        <img src="./img/czechia.gif" alt="Czechia flag"> Czechia
+                                    </a>
+                                </td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>○○○○○</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
         </div>
     </main>
     <script>
-        function navigateToGroup(url) {
-            window.location.href = url;
+        // 페이지 로드 시 URL 파라미터를 확인하고 openGroup 함수를 호출하는 함수
+        window.onload = function() {
+            const id = getParameterByName('id');
+            if (id) {
+                clickGroupButton(id);
+            }
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            const groupsContainer = document.querySelector('.groups');
-            let isDown = false;
-            let startX;
-            let scrollLeft;
+        // URL 파라미터에서 id 값을 가져오는 함수
+        function getParameterByName(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
 
-            // Mouse down event
-            groupsContainer.addEventListener('mousedown', (e) => {
-                isDown = true;
-                groupsContainer.classList.add('active');
-                startX = e.pageX - groupsContainer.offsetLeft;
-                scrollLeft = groupsContainer.scrollLeft;
-            });
+        // 해당 그룹 ID에 해당하는 버튼을 찾아 클릭해주는 함수
+        function clickGroupButton(groupId) {
+            const button = document.querySelector('.tab button[onclick="openGroup(event, \'' + groupId + '\')"]');
+            
+            if (button) {
+                button.click();
+            } else {
+                console.log("그룹 버튼을 찾을 수 없습니다.");
+            }
+        }
 
-            // Mouse leave event
-            groupsContainer.addEventListener('mouseleave', () => {
-                isDown = false;
-                groupsContainer.classList.remove('active');
-            });
+        // 페이지에 그룹별 표를 보여주는 함수
+        function openGroup(event, groupName) {
+            var i, tabcontent, tablinks;
 
-            // Mouse up event
-            groupsContainer.addEventListener('mouseup', () => {
-                isDown = false;
-                groupsContainer.classList.remove('active');
-            });
-
-            // Mouse move event
-            groupsContainer.addEventListener('mousemove', (e) => {
-                if (!isDown) return;
-                e.preventDefault();
-                const x = e.pageX - groupsContainer.offsetLeft;
-                const walk = (x - startX) * 2; // 2 for increased scroll speed
-                groupsContainer.scrollLeft = scrollLeft - walk;
-            });
-        });
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            document.getElementById(groupName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
     </script>
 </body>
 </html>
