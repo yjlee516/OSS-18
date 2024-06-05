@@ -73,22 +73,19 @@
             margin: 25px 0 15px;
         }
 
-        .group li {
+        .group li a {
             display: grid;
             grid-template-columns: 40px 120px;
             align-items: center;
             justify-content: center;
+            color: white;
+            text-decoration: none;
         }
 
-        .group li img {
+        .group li a img {
             width: 40px;
             height: 30px;
             border-radius: 5px;
-        }
-
-        .group li a {
-            color: white;
-            text-decoration: none;
         }
     </style>
 </head>
@@ -108,9 +105,64 @@
             </ul>
         </nav>
     </header>
-    <main style="display: grid; align-items: center; justify-content: center;">
-        <h1 style="text-align: center; font-size: 100px; font-weight: bold;">EURO 2024</h1>
-        <img src="./img/euro-2024-logo-favicon.png" style="width: 500px; align-items: center; opacity: 20%;">
+    <main>
+        <h1>Groups</h1>
+        <div class="groups">
+            <div class="group" id="group-a" onclick="navigateToGroup('groupA.html')">
+                <h2>Group A</h2>
+                <ul>
+                    <li><a href="index.html"><img src="./img/germany.gif" alt="Germany"> Germany</a></li>
+                    <li><a href="index.html"><img src="./img/scotland.gif" alt="Scotland"> Scotland</a></li>
+                    <li><a href="index.html"><img src="./img/hungary.gif" alt="Hungary"> Hungary</a></li>
+                    <li><a href="index.html"><img src="./img/switzerland.gif" alt="Switzerland"> Switzerland</a></li>
+                </ul>
+            </div>
+            <div class="group" id="group-b" onclick="navigateToGroup('groupB.html')">
+                <h2>Group B</h2>
+                <ul>
+                    <li><a href="index.html"><img src="./img/spain.gif" alt="Spain"> Spain</a></li>
+                    <li><a href="index.html"><img src="./img/croatia.gif" alt="Croatia"> Croatia</a></li>
+                    <li><a href="index.html"><img src="./img/italy.gif" alt="Italy"> Italy</a></li>
+                    <li><a href="index.html"><img src="./img/albania.gif" alt="Albania"> Albania</a></li>
+                </ul>
+            </div>
+            <div class="group" id="group-c" onclick="navigateToGroup('groupC.html')">
+                <h2>Group C</h2>
+                <ul>
+                    <li><a href="index.html"><img src="./img/slovenia.gif" alt="Slovenia"> Slovenia</a></li>
+                    <li><a href="index.html"><img src="./img/denmark.gif" alt="Denmark"> Denmark</a></li>
+                    <li><a href="index.html"><img src="./img/serbia.gif" alt="Serbia"> Serbia</a></li>
+                    <li><a href="index.html"><img src="./img/england.gif" alt="England"> England</a></li>
+                </ul>
+            </div>
+            <div class="group" id="group-d" onclick="navigateToGroup('groupD.html')">
+                <h2>Group D</h2>
+                <ul>
+                    <li><a href="index.html"><img src="./img/poland.gif" alt="Poland"> Poland</a></li>
+                    <li><a href="index.html"><img src="./img/netherlands.gif" alt="Netherlands"> Netherlands</a></li>
+                    <li><a href="index.html"><img src="./img/austria.gif" alt="Austria"> Austria</a></li>
+                    <li><a href="index.html"><img src="./img/france.gif" alt="France"> France</a></li>
+                </ul>
+            </div>
+            <div class="group" id="group-e" onclick="navigateToGroup('groupE.html')">
+                <h2>Group E</h2>
+                <ul>
+                    <li><a href="index.html"><img src="./img/belgium.gif" alt="Belgium"> Belgium</a></li>
+                    <li><a href="index.html"><img src="./img/slovakia.gif" alt="Slovakia"> Slovakia</a></li>
+                    <li><a href="index.html"><img src="./img/romania.gif" alt="Romania"> Romania</a></li>
+                    <li><a href="index.html"><img src="./img/ukraine.gif" alt="Ukraine"> Ukraine</a></li>
+                </ul>
+            </div>
+            <div class="group" id="group-f" onclick="navigateToGroup('groupF.html')">
+                <h2>Group F</h2>
+                <ul>
+                    <li><a href="index.html"><img src="./img/turkiye.gif" alt="Turkiye"> Turkiye</a></li>
+                    <li><a href="index.html"><img src="./img/georgia.gif" alt="Georgia"> Georgia</a></li>
+                    <li><a href="index.html"><img src="./img/portugal.gif" alt="Portugal"> Portugal</a></li>
+                    <li><a href="index.html"><img src="./img/czechia.gif" alt="Czechia"> Czechia</a></li>
+                </ul>
+            </div>
+        </div>
     </main>
     <script>
         function navigateToGroup(url) {
